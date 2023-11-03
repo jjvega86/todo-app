@@ -1,9 +1,8 @@
 import { addTodo } from "../actions";
-import { useFormStatus } from "react-dom";
+import SubmitButton from "./SubmitButton";
 import React from "react";
 
 export default function TodoFormSS() {
-  const {pending} = useFormStatus();
   
   return (
     <div className="flex justify-center items-center bg-gray-900">
@@ -30,13 +29,7 @@ export default function TodoFormSS() {
             />
           </div>
 
-          <button
-            type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-md"
-            aria-disabled={pending}
-          >
-            Add Task
-          </button>
+          <SubmitButton label="Add Task" />
         </form>
       </div>
     </div>
