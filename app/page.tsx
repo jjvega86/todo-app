@@ -1,10 +1,8 @@
 import Link from "next/link";
 import ToDoList from "./components/TodoList";
 
-// TODO: <FEAT> - Checkbox to mark todo as "complete"
 // TODO: <FEAT> - Show overdue todos as red background
 // TODO: <FEAT> - Sort todos by due date
-// TODO: <FEAT> - Delete todo
 // TODO: <FEAT> - Update todo
 
 

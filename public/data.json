@@ -1,10 +1,5 @@
 [
   {
-    "id": 1,
-    "task": "Finish the weekly report",
-    "dueDate": "2023-10-20"
-  },
-  {
     "id": 2,
     "task": "Attend the team meeting",
     "dueDate": "2023-10-21"
@@ -23,16 +18,6 @@
     "id": 5,
     "task": "Prepare presentation for tomorrow",
     "dueDate": "2023-10-24"
-  },
-  {
-    "id": 6,
-    "task": "Order office supplies",
-    "dueDate": "2023-10-25"
-  },
-  {
-    "id": 7,
-    "task": "Update project management tool",
-    "dueDate": "2023-10-26"
   },
   {
     "id": 8,

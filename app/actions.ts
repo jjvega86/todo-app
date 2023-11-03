@@ -18,3 +18,14 @@ export const addTodo = async (data: FormData) => {
   // Redirect them back to the Homepage
   redirect("/");
 };
+
+export const markComplete = async (id : number) => {
+  try {
+    await axios.delete(`http://localhost:3000/api?id=${id}`);
+    revalidateTag("ToDo");
+  } catch (error) {
+    console.log(error)
+  }
+  
+  
+}

@@ -33,3 +33,20 @@ export async function POST(request: NextRequest) {
 
   return Response.json({"status":201,message: 'Task added successfully!'})
 }
+
+export async function DELETE(request: NextRequest){
+  const filePath = path.join(process.cwd(), 'public', 'data.json');
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const currentData = JSON.parse(fileContents);
+
+  const { searchParams } = new URL(request.url)
+  const id = searchParams.get('id')
+  const parsedId = id !== null ? parseInt(id) : null;
+
+  const updatedData = currentData.filter((item : toDo) => item.id !== parsedId)
+
+  fs.writeFileSync(filePath, JSON.stringify(updatedData, null, 2));
+
+  return Response.json({"status": 204, message: "Task completed successfully!"})
+
+}
